@@ -81,7 +81,7 @@ void draw() {
   
   text("Space", 310, 40 + 15*26);
   
-  text("Press 'E' to enter binary", 75, 160);
+//  text("Press 'E' to enter binary", 75, 160);
   
   
   
@@ -118,7 +118,7 @@ void keyPressed() {
     inputs = temp;
   }
 
-  if (keyCode == 'E') {
+  if (key == ENTER) {
     submitString();
   }
 }
