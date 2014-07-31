@@ -72,13 +72,14 @@ void draw() {
   fill(0);
   text(characters,70,310);
   
+  //List
   for(int i = 0; i < 27; i++){
     textSize(12);
     text(binaryLetters[i],310,40+15*i);
     text(binaryNumbers[i],370,40+15*i);
   }
   
-  
+  text("Space", 310, 40 + 15*26);
   
   
   
