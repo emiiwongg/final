@@ -10,7 +10,7 @@ String inputs = "";
 String characters = "";
 String temp = "";
 
-String[] binaryLetters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Space" };
+String[] binaryLetters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " " };
 
 
 void setup() {
@@ -72,13 +72,16 @@ void draw() {
   fill(0);
   text(characters,70,310);
   
+  //List
   for(int i = 0; i < 27; i++){
     textSize(12);
     text(binaryLetters[i],310,40+15*i);
     text(binaryNumbers[i],370,40+15*i);
   }
   
+  text("Space", 310, 40 + 15*26);
   
+  text("Press 'E' to enter binary", 75, 160);
   
   
   
@@ -111,11 +114,11 @@ void keyPressed() {
     inputs = inputs + "0";
   }
   
-  if (keyCode == BACKSPACE) {
+  if (key == BACKSPACE) {
     inputs = temp;
   }
 
-  if (keyCode == ENTER) {
+  if (keyCode == 'E') {
     submitString();
   }
 }
