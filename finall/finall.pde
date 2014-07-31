@@ -112,7 +112,7 @@ void keyPressed() {
     inputs = inputs + "0";
   }
   
-  if (keyCode == BACKSPACE) {
+  if (key == BACKSPACE) {
     inputs = temp;
   }
 
