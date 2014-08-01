@@ -1,6 +1,6 @@
 PFont myFont;
-boolean errorboo = false;
 
+boolean found = true;
 
 String[] binaryNumbers = {
   "01000001", "01000010", "01000011", "01000100", "01000101", "01000110", "01000111", "01001000", "01001001", "01001010", "01001011", "01001100", "01001101", "01001110", "01001111", "01010000", "01010001", "01010010", "01010011", "01010100", "01010101", "01010110", "01010111", "01011000", "01011001", "01011010", "00100000"
@@ -83,7 +83,11 @@ void draw() {
   
    text("Press 'Enter' to enter binary", 60, 160);
   
-  
+  if(found == false){
+      fill(255, 0, 0);
+      textSize(24);
+      text("ERROR", 70, 250);
+    }
   
 }
 
@@ -126,15 +130,13 @@ void keyPressed() {
 
 boolean submitString(){
   
+  found = false;
   for(int i = 0; i < 27; i++){
     if(inputs.compareTo(binaryNumbers[i])==0){
       characters = characters + binaryLetters[i];
-      
+      found = true;
     }
-//     else if(inputs != binaryNumbers[i]){
-//      fill(255, 0, 0);
-//    text("ERROR", 70, 270);
-//    }
+     
   }
   
   inputs = "";
