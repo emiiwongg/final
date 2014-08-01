@@ -96,12 +96,14 @@ void mouseClicked()
   if(mouseX > 230 && mouseY > 285 && mouseX < 280 && mouseY < 335 )
   {
     characters = "";
+    found = true;
     print (characters);
   }
   
   if(mouseX > 230 && mouseY > 225 && mouseX < 280 && mouseY < 275 )
   {
     inputs = "";
+    found = true;
     print (inputs);
   }
   
@@ -110,11 +112,13 @@ void mouseClicked()
 void keyPressed() {
   if (key == '1') {
     temp = inputs;
+    found = true;
     inputs = inputs + "1";
   } 
 
   if (key == '0') {
     temp = inputs;
+    found = true;
     inputs = inputs + "0";
   }
   
